@@ -1,9 +1,11 @@
 🚀 Nitron Browser
+
 A modern, lightweight web browser built using Python's PyQt5 library.
 This browser provides a clean, intuitive interface with essential web browsing features including tabbed browsing, bookmarks, and customizable themes.
 Perfect for users who want a simple, fast browsing experience with both dark and light mode support.
 
 ⭐ Features
+
 
 💻 Clean and modern PyQt5-based GUI
 🗂️ Tabbed browsing with easy tab management

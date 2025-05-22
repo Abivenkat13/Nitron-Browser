@@ -173,18 +173,8 @@ PyQtWebEngine>=5.15.0
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+                    
 
-- Built with PyQt5 and QtWebEngine
-- Uses Brave Search as the default search engine
-- Inspired by modern browser design principles
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the troubleshooting section above
-2. Create an issue in the repository
-3. Contact the development team
 
 ---
 

@@ -1,146 +1,191 @@
-# Nitron Browser 🌐🚀
+# 🌐 Nitron Browser
 
-[![PyQt5](https://img.shields.io/badge/PyQt5-5.15-blue)](https://pypi.org/project/PyQt5/)
-[![Python](https://img.shields.io/badge/Python-3.6+-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+A modern, lightweight web browser built with Python and PyQt5, featuring a clean interface, tabbed browsing, and essential web navigation tools.
 
-A modern, lightweight web browser built with Python's PyQt5 library. Enjoy a clean, intuitive browsing experience with essential features and customizable themes.
-
-![Nitron Browser Screenshot](screenshots/nitron_dark_mode.png)
+![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
+![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-green.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)
 
 ## ✨ Features
 
-### 🌈 Interface
-- Clean, modern PyQt5-based GUI
-- Dark/Light mode toggle
-- Customizable themes
-
-### 🗂️ Navigation
-- Tabbed browsing with easy management
-- Smart URL bar (supports URLs & search)
-- Back/Forward/Reload/Home buttons
-- Customizable homepage
-
-### 📚 Productivity
-- Bookmark system
-- Integrated Brave Search engine
-- Cross-platform (Windows, macOS, Linux)
-
-## 🛠️ Project Structure
-
-Nitron-Browser/
-│
-├── browser.py # Main browser logic
-├── icons/ # SVG icons
-│ ├── back.svg
-│ ├── forward.svg
-│ ├── reload.svg
-│ ├── home.svg
-│ ├── new-tab.svg
-│ ├── bookmark.svg
-│ ├── bookmarks-list.svg
-│ └── dark-mode.svg
-├── requirements.txt # Dependencies
-├── README.md # Documentation
-└── screenshots/ # UI screenshots
-├── nitron_dark_mode.png
-├── nitron_light_mode.png
-└── tab_management.png
-
+- **🗂️ Tabbed Browsing** - Multiple tabs with easy navigation
+- **🔍 Smart Search** - Integrated search using Brave Search engine
+- **📑 Bookmarks** - Save and manage your favorite websites
+- **🌙 Dark/Light Mode** - Toggle between themes for comfortable browsing
+- **🏠 Home Page** - Quick access to your default homepage
+- **⚡ Fast Navigation** - Back, forward, reload, and home buttons
+- **📱 Modern UI** - Clean, intuitive interface with rounded corners and smooth styling
 
 ## 🚀 Quick Start
 
+### Prerequisites
+
+- Python 3.7 or higher
+- pip (Python package installer)
+
 ### Installation
 
-1. Clone the repository:
+1. **Clone or download the repository:**
    ```bash
-   git clone https://github.com/your-username/Nitron-Browser.git
-   cd Nitron-Browser
-Create virtual environment (recommended):
+   git clone <your-repository-url>
+   cd nitron-browser
+   ```
 
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies:
+2. **Install required dependencies:**
+   ```bash
+   pip install PyQt5 PyQtWebEngine
+   ```
 
-bash
-pip install -r requirements.txt
-Or manually:
+3. **Create the icons directory structure:**
+   ```
+   nitron-browser/
+   ├── browser.py
+   └── icons/
+       ├── back.svg
+       ├── forward.svg
+       ├── reload.svg
+       ├── home.svg
+       ├── new-tab.svg
+       ├── bookmark.svg
+       ├── bookmarks-list.svg
+       └── dark-mode.svg
+   ```
 
-bash
+4. **Run the browser:**
+   ```bash
+   python browser.py
+   ```
+
+## 📁 Project Structure
+
+```
+nitron-browser/
+├── browser.py              # Main browser application
+├── icons/                  # Navigation icons (SVG format)
+│   ├── back.svg
+│   ├── forward.svg
+│   ├── reload.svg
+│   ├── home.svg
+│   ├── new-tab.svg
+│   ├── bookmark.svg
+│   ├── bookmarks-list.svg
+│   └── dark-mode.svg
+└── README.md              # This file
+```
+
+## 🎯 Usage
+
+### Basic Navigation
+- **New Tab**: Click the "+" icon or use the new tab button
+- **Close Tab**: Click the "×" on any tab (browser closes if only one tab remains)
+- **Navigate**: Use back/forward buttons or enter URLs in the address bar
+- **Search**: Type search terms in the address bar (uses Brave Search)
+- **Home**: Click the home button to return to the default homepage
+
+### Bookmarks
+- **Add Bookmark**: Click the bookmark icon to save the current page
+- **View Bookmarks**: Click the bookmarks list icon to see all saved bookmarks
+
+### Themes
+- **Toggle Dark/Light Mode**: Click the theme toggle button in the toolbar
+
+## ⚙️ Configuration
+
+### Default Homepage
+The browser uses `https://search.brave.com` as the default homepage. To change this, modify the `default_homepage` variable in the `Browser` class:
+
+```python
+self.default_homepage = "https://your-preferred-homepage.com"
+```
+
+### Custom Styling
+The browser includes custom CSS styling for both dark and light modes. You can modify the `set_dark_mode()` and `set_light_mode()` methods to customize the appearance.
+
+## 🛠️ Technical Details
+
+### Built With
+- **Python** - Core programming language
+- **PyQt5** - GUI framework
+- **QtWebEngine** - Web rendering engine
+- **Brave Search** - Default search engine
+
+### Key Components
+- `QMainWindow` - Main browser window
+- `QTabWidget` - Tab management
+- `QWebEngineView` - Web page rendering
+- `QToolBar` - Navigation controls
+- `QLineEdit` - Address bar
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**1. Import Error: No module named 'PyQt5'**
+```bash
 pip install PyQt5 PyQtWebEngine
-Set up icons:
+```
 
-bash
-mkdir icons
-# Add SVG files to icons directory
-Running Nitron
-bash
-python browser.py
-⚙️ Configuration
-Setting	How to Change
-Default Homepage	Edit self.default_homepage in browser.py
-Search Engine	Modify the search URL in the navigate_to_url method
-🔮 Roadmap
-Feature	Status	Description
-Download Manager	Planned	Built-in download management
-History System	Planned	Browsing history with search
-Settings Panel	Planned	Comprehensive preferences
-Extensions Support	Planned	Plugin system for additional features
-Private Browsing	Planned	Incognito mode
-Full-screen Mode	Planned	Distraction-free browsing
-Keyboard Shortcuts	Planned	Customizable hotkeys
-📦 Dependencies
-PyQt5 - Modern GUI framework
+**2. Icons not displaying**
+- Ensure the `icons/` directory exists in the same folder as `browser.py`
+- Verify all required SVG icon files are present
 
-PyQtWebEngine - Web engine integration
+**3. Web pages not loading**
+- Check your internet connection
+- Ensure QtWebEngine is properly installed
+- Try running with administrator privileges if needed
 
-Install all with:
+**4. Browser crashes on startup**
+- Update PyQt5 to the latest version
+- Check Python version compatibility (3.7+)
 
-bash
-pip install -r requirements.txt
-💻 System Requirements
-Python: 3.6+
+## 🔧 Development
 
-OS: Windows, macOS, or Linux
+### Adding New Features
+The browser is designed with modularity in mind. Key areas for extension:
 
-Memory: 512MB minimum (1GB recommended)
+- **Plugins**: Add new toolbar buttons in `add_navigation_buttons()`
+- **Settings**: Extend configuration options
+- **History**: Implement browsing history functionality
+- **Downloads**: Add download management
 
-Storage: 100MB free space
+### Code Structure
+- Navigation logic is centralized in navigation methods
+- UI styling is separated into theme methods
+- Tab management is handled through Qt's tab widget system
 
-🤝 Contributing
-We welcome contributions! Here's how:
+## 📋 Requirements
 
-Fork the repository
+```
+PyQt5>=5.15.0
+PyQtWebEngine>=5.15.0
+```
 
-Create your feature branch (git checkout -b feature/amazing-feature)
+## 🤝 Contributing
 
-Commit your changes (git commit -m 'Add some amazing feature')
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Push to the branch (git push origin feature/amazing-feature)
+## 📄 License
 
-Open a Pull Request
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Found a bug? Please open an issue!
+## 🙏 Acknowledgments
 
-📄 License
-MIT License - See LICENSE for details.
+- Built with PyQt5 and QtWebEngine
+- Uses Brave Search as the default search engine
+- Inspired by modern browser design principles
 
-Developed with ❤️ by Your Name
-GitHub
+## 📞 Support
 
-Browse the web with style and simplicity
+If you encounter any issues or have questions:
+1. Check the troubleshooting section above
+2. Create an issue in the repository
+3. Contact the development team
 
+---
 
-### Key Improvements:
-1. Added badges for quick visual indicators
-2. Organized features into clear categories
-3. Used tables for configuration and roadmap
-4. Improved code block formatting
-5. Added consistent emoji usage
-6. Better section hierarchy with clear headers
-7. More professional layout while keeping personality
-8. Added visual separation between sections
-9. Improved overall readability with consistent formatting
-
-You can copy this directly into your README.md file. For the screenshots to work, make sure you have the images in your `screenshots/` directory as indicated in your project structure.
+**Made with ❤️ using Python and PyQt5**

@@ -1,125 +1,146 @@
-🚀 Nitron Browser
+# Nitron Browser 🌐🚀
 
-A modern, lightweight web browser built using Python's PyQt5 library.
-This browser provides a clean, intuitive interface with essential web browsing features including tabbed browsing, bookmarks, and customizable themes.
-Perfect for users who want a simple, fast browsing experience with both dark and light mode support.
+[![PyQt5](https://img.shields.io/badge/PyQt5-5.15-blue)](https://pypi.org/project/PyQt5/)
+[![Python](https://img.shields.io/badge/Python-3.6+-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-⭐ Features
+A modern, lightweight web browser built with Python's PyQt5 library. Enjoy a clean, intuitive browsing experience with essential features and customizable themes.
 
+![Nitron Browser Screenshot](screenshots/nitron_dark_mode.png)
 
-💻 Clean and modern PyQt5-based GUI
-🗂️ Tabbed browsing with easy tab management
-🎯 Smart URL bar - supports both URLs and search queries
-💾 Bookmark system for saving favorite websites
-🎨 Dark/Light mode toggle for comfortable browsing
-🏡 Home button with customizable homepage
-🧭 Fast navigation with back, forward, and reload buttons
-🔎 Integrated search using Brave Search engine
-🌍 Cross-platform - runs on Windows, macOS, and Linux
+## ✨ Features
 
+### 🌈 Interface
+- Clean, modern PyQt5-based GUI
+- Dark/Light mode toggle
+- Customizable themes
 
-📋 Project Structure
+### 🗂️ Navigation
+- Tabbed browsing with easy management
+- Smart URL bar (supports URLs & search)
+- Back/Forward/Reload/Home buttons
+- Customizable homepage
+
+### 📚 Productivity
+- Bookmark system
+- Integrated Brave Search engine
+- Cross-platform (Windows, macOS, Linux)
+
+## 🛠️ Project Structure
+
 Nitron-Browser/
 │
-├── browser.py             # Main Python script with browser logic
-├── icons/                 # SVG icons for toolbar buttons
-│   ├── back.svg
-│   ├── forward.svg
-│   ├── reload.svg
-│   ├── home.svg
-│   ├── new-tab.svg
-│   ├── bookmark.svg
-│   ├── bookmarks-list.svg
-│   └── dark-mode.svg
-├── requirements.txt       # List of dependencies
-├── README.md              # Project documentation
-└── screenshots/           # Folder for storing UI screenshots
-    ├── nitron_dark_mode.png
-    ├── nitron_light_mode.png
-    └── tab_management.png
-
-🛠️ Installation
-1️⃣ Clone the repository
-bashgit clone https://github.com/your-username/Nitron-Browser.git
-cd Nitron-Browser
-2️⃣ Create a virtual environment (recommended)
-bashpython -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-3️⃣ Install dependencies
-bashpip install -r requirements.txt
-Or install manually:
-bashpip install PyQt5 PyQtWebEngine
-4️⃣ Create the icons directory
-Create an icons folder and add the required SVG icon files:
-bashmkdir icons
-# Add the required SVG files to the icons directory
-
-💡 Note: You can download free SVG icons from Feather Icons, Heroicons, or create your own simple SVG icons.
+├── browser.py # Main browser logic
+├── icons/ # SVG icons
+│ ├── back.svg
+│ ├── forward.svg
+│ ├── reload.svg
+│ ├── home.svg
+│ ├── new-tab.svg
+│ ├── bookmark.svg
+│ ├── bookmarks-list.svg
+│ └── dark-mode.svg
+├── requirements.txt # Dependencies
+├── README.md # Documentation
+└── screenshots/ # UI screenshots
+├── nitron_dark_mode.png
+├── nitron_light_mode.png
+└── tab_management.png
 
 
-⚡ How to Run
-bashpython browser.py
+## 🚀 Quick Start
 
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Nitron-Browser.git
+   cd Nitron-Browser
+Create virtual environment (recommended):
+
+bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install dependencies:
+
+bash
+pip install -r requirements.txt
+Or manually:
+
+bash
+pip install PyQt5 PyQtWebEngine
+Set up icons:
+
+bash
+mkdir icons
+# Add SVG files to icons directory
+Running Nitron
+bash
+python browser.py
 ⚙️ Configuration
-🏠 Change Default Homepage
-Edit the default_homepage variable in browser.py:
-pythonself.default_homepage = "https://your-preferred-homepage.com"
-🔍 Change Default Search Engine
-Modify the search URL in the navigate_to_url method:
-pythonurl = f"https://your-search-engine.com/search?q={query.decode()}"
-The browser uses Brave Search by default for enhanced privacy.
-
-🚧 Future Improvements
-FeatureStatusDescription📥 Download Manager🔜 PlannedBuilt-in download management system📜 History🔜 PlannedBrowsing history with search functionality🎛️ Settings Panel🔜 PlannedComprehensive settings and preferences🧩 Extensions Support🔜 PlannedPlugin system for additional features🕵️ Private Browsing🔜 PlannedIncognito mode for private sessions🖥️ Full-screen Mode🔜 PlannedDistraction-free browsing experience⌨️ Keyboard Shortcuts🔜 PlannedCustomizable hotkeys for power users
-
+Setting	How to Change
+Default Homepage	Edit self.default_homepage in browser.py
+Search Engine	Modify the search URL in the navigate_to_url method
+🔮 Roadmap
+Feature	Status	Description
+Download Manager	Planned	Built-in download management
+History System	Planned	Browsing history with search
+Settings Panel	Planned	Comprehensive preferences
+Extensions Support	Planned	Plugin system for additional features
+Private Browsing	Planned	Incognito mode
+Full-screen Mode	Planned	Distraction-free browsing
+Keyboard Shortcuts	Planned	Customizable hotkeys
 📦 Dependencies
+PyQt5 - Modern GUI framework
 
-PyQt5 – Modern GUI framework for Python
-PyQtWebEngine – Web engine integration for PyQt5
+PyQtWebEngine - Web engine integration
 
-You can install everything with:
-bashpip install -r requirements.txt
+Install all with:
+
+bash
+pip install -r requirements.txt
 💻 System Requirements
+Python: 3.6+
 
-Python: 3.6 or higher
-Operating System: Windows, macOS, or Linux
-Memory: 512MB RAM minimum (1GB recommended)
+OS: Windows, macOS, or Linux
+
+Memory: 512MB minimum (1GB recommended)
+
 Storage: 100MB free space
 
-
-🌐 Platform-Specific Installation
-🪟 Windows
-bashpip install PyQt5 PyQtWebEngine
-🍎 macOS
-bashpip3 install PyQt5 PyQtWebEngine
-# Additional dependencies might be needed:
-brew install python-tk
-🐧 Linux (Ubuntu/Debian)
-bashsudo apt update
-sudo apt install python3-pip python3-pyqt5 python3-pyqt5.qtwebengine
-pip3 install PyQt5 PyQtWebEngine
-🐧 Linux (Fedora/RHEL)
-bashsudo dnf install python3-pip python3-qt5 python3-qt5-webengine
-pip3 install PyQt5 PyQtWebEngine
-
 🤝 Contributing
-Contributions are welcome! Here's how you can help:
+We welcome contributions! Here's how:
 
-🍴 Fork this repository
-🌿 Create your feature branch (git checkout -b feature/amazing-feature)
-💾 Commit your changes (git commit -m 'Add some amazing feature')
-📤 Push to the branch (git push origin feature/amazing-feature)
-🔀 Open a Pull Request
+Fork the repository
 
-You can also open issues if you find any problems or have suggestions.
+Create your feature branch (git checkout -b feature/amazing-feature)
+
+Commit your changes (git commit -m 'Add some amazing feature')
+
+Push to the branch (git push origin feature/amazing-feature)
+
+Open a Pull Request
+
+Found a bug? Please open an issue!
 
 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+MIT License - See LICENSE for details.
 
-👨‍💻 Author
-Developed by Your Name.
-For queries or collaborations, feel free to open an issue or connect via GitHub.
+Developed with ❤️ by Your Name
+GitHub
 
-<p align="center">
-  <sub>🌟 Browse the web with style and simplicity. 🌐</sub>
-</p>
+Browse the web with style and simplicity
+
+
+### Key Improvements:
+1. Added badges for quick visual indicators
+2. Organized features into clear categories
+3. Used tables for configuration and roadmap
+4. Improved code block formatting
+5. Added consistent emoji usage
+6. Better section hierarchy with clear headers
+7. More professional layout while keeping personality
+8. Added visual separation between sections
+9. Improved overall readability with consistent formatting
+
+You can copy this directly into your README.md file. For the screenshots to work, make sure you have the images in your `screenshots/` directory as indicated in your project structure.
